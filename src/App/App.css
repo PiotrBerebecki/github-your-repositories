@@ -5,18 +5,35 @@
   margin-right: auto;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
 }
 
 .repos__header {
   display: flex;
   align-items: center;
-  /*font-size: 1.3rem;*/
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  background-color: rgb(245, 245, 245);
   font-weight: 700;
 }
 
+.repos__title {
+  color: rgb(51, 51, 51);
+}
+
+
 .repos__count {
-  background-color: rgb(216, 216, 216);
+  display: flex;
+  align-items: center;
+  height: 1.3rem;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+
+  margin-left: 0.4rem;
+  /*padding: 0.05rem 0.4rem;*/
+  border-radius: 1rem / 1rem;
+  background-color: #babec0;
+  color: white;
   /*background-color: rgb(245, 245, 245);*/
 }

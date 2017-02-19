@@ -7,7 +7,7 @@ class App extends Component {
       <div className="repos">
 
         <div className="repos__header">
-          <h3>Your repositories 20</h3>
+          <h3 className="repos__title">Your repositories</h3>
           <span className="repos__count">
             20
           </span>
