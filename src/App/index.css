@@ -1,4 +1,4 @@
-.repos {
+.widget-repos {
   width: 90%;
   margin-top: 1rem;
   margin-left: auto;
@@ -61,11 +61,50 @@
                     0 0 5px rgba(81,167,232,0.5);
 }
 
-.tabs {
+.filter {
   padding-left: 0.8rem;
   padding-right: 0.8rem;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 0.2rem;
+  /*padding-bottom: 0.8rem;*/
+  border-bottom: 1px solid #e5e5e5;
   background-color: #fafafa;
+}
+
+.filter__list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.filter__btn {
+  margin-right: 0.6rem;
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
   color: #767676;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.filter__btn:hover {
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.filter__btn:focus {
+  /*outline: 1px solid #51a7e8;*/
+  /*box-shadow: 0 0 5px rgba(81,167,232,0.5);*/
+}
+
+.filter__btn--active {
+  border-bottom: 2px solid #d26911;
+  cursor: default;
+}
+
+.filter__btn--active:hover {
+  border-bottom: 2px solid #d26911;
+}
+
+.filter__btn--active:focus {
+  /*outline: none;*/
+  /*box-shadow: none;*/
 }
