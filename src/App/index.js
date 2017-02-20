@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import Database from './../Database';
 import './index.css';
 
 class App extends Component {
@@ -8,25 +10,26 @@ class App extends Component {
 
     this.state = {
       count: 88,
-      filterActive: 'All'
+      filterSelected: 'All'
     };
   }
 
   changeFilter(e) {
     this.setState({
-      filterActive: e.target.id
+      filterSelected: e.target.id
     });
   }
 
   render() {
-    const { count, filterActive } = this.state;
+    const { count, filterSelected } = this.state;
 
     const renderFilterItems = ['All', 'Public', 'Private', 'Sources', 'Forks']
       .map((item, index) => {
         return (
           <li className="filter__item" key={`${item}`}>
             <button
-              className={item === filterActive ? 'filter__btn filter__btn--active filter__btn--' + item : `filter__btn`}
+              className={`filter__btn${(item === filterSelected ? ' filter__btn--selected' : '')}`}
+              disabled={item === filterSelected ? true : false}
               id={item}
               onClick={this.changeFilter}
             >
@@ -34,6 +37,13 @@ class App extends Component {
             </button>
           </li>
         );
+      });
+
+    const filterSelectedLowerCase = filterSelected.toLowerCase();
+    const renderRepos = Database
+      .filter(repo => filterSelected === 'All' || repo[filterSelectedLowerCase])
+      .map((repo, index) => {
+        return <li repos__item key={index}><a href="#">{repo.name}</a></li>;
       });
 
     return (
@@ -61,8 +71,9 @@ class App extends Component {
         </section>
 
         <section className="repos">
-          CSS
-          js
+          <ul className="repos__list">
+            {renderRepos}
+          </ul>
         </section>
 
       </div>

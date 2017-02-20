@@ -90,21 +90,21 @@
   border-bottom: 2px solid #e5e5e5;
 }
 
-.filter__btn:focus {
-  /*outline: 1px solid #51a7e8;*/
-  /*box-shadow: 0 0 5px rgba(81,167,232,0.5);*/
+.filter__btn:active {
+  outline: none;
+  box-shadow: none;
 }
 
-.filter__btn--active {
+.filter__btn--selected {
   border-bottom: 2px solid #d26911;
   cursor: default;
 }
 
-.filter__btn--active:hover {
+.filter__btn--selected:hover {
   border-bottom: 2px solid #d26911;
 }
 
-.filter__btn--active:focus {
-  /*outline: none;*/
-  /*box-shadow: none;*/
+.filter__btn--selected:focus {
+  outline: none;
+  box-shadow: none;
 }
