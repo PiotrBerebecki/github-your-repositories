@@ -1,4 +1,6 @@
-# GitHub - Your Repositories Widget in React
+# GitHub 'Your Repositories' Widget in React
+
+A clone of GitHub's 'Your Repositories' Widget built with React.
 
 <!-- Live version: https://github-your-repositories.herokuapp.com -->
 

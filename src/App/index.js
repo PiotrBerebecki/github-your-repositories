@@ -8,11 +8,19 @@ class App extends Component {
   constructor() {
     super();
     this.changeFilter = this.changeFilter.bind(this);
+    this.handleText = this.handleText.bind(this);
 
     this.state = {
       count: 88,
-      filterSelected: 'All'
+      filterSelected: 'All',
+      searchText: ''
     };
+  }
+
+  handleText(e) {
+    this.setState({
+      searchText: e.target.value
+    });
   }
 
   changeFilter(e) {
@@ -22,7 +30,7 @@ class App extends Component {
   }
 
   render() {
-    const { count, filterSelected } = this.state;
+    const { count, filterSelected, searchText } = this.state;
 
     const renderFilterItems = ['All', 'Public', 'Private', 'Sources', 'Forks']
       .map((item, index) => {
@@ -42,7 +50,7 @@ class App extends Component {
 
     const filterSelectedLowerCase = filterSelected.toLowerCase();
     const renderRepos = Database
-      .filter(repo => filterSelected === 'All' || repo[filterSelectedLowerCase])
+      .filter(repo => (filterSelected === 'All' || repo[filterSelectedLowerCase]) && repo.name.includes(searchText))
       .map((repo, index) => {
         return (
           <li className="repos__item" key={index}>
@@ -67,6 +75,8 @@ class App extends Component {
             className="search__field"
             type="text"
             placeholder="Find a repository"
+            value={searchText}
+            onChange={this.handleText}
           />
         </section>
 

@@ -2,8 +2,6 @@ const Database = [
   { name: 'immutable-js', public: true, private: false, sources: false, forks: true },
   { name: 'cortex', public: true, private: false, sources: false, forks: true },
   { name: 'moreartyjs', public: true, private: false, sources: false, forks: true },
-  { name: 'valuable', public: true, private: false, sources: false, forks: true },
-  { name: 'datascript', public: true, private: false, sources: false, forks: true },
   { name: 'video-speed-controller', public: true, private: false, sources: true, forks: false },
   { name: 'click-drag-scroll', public: true, private: false, sources: true, forks: false },
   { name: 'sticky-nav', public: false, private: true, sources: true, forks: false },
