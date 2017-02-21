@@ -11,7 +11,7 @@ class App extends Component {
     this.handleText = this.handleText.bind(this);
 
     this.state = {
-      count: 88,
+      count: Database.length,
       filterSelected: 'All',
       searchText: ''
     };
