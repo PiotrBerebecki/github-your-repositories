@@ -23,7 +23,7 @@
   padding-right: 0.8rem;
   border-bottom: 1px solid #d8d8d8;
   background-color: #f5f5f5;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .header__title {
@@ -74,7 +74,6 @@
   padding-left: 0.8rem;
   padding-right: 0.8rem;
   padding-top: 0.2rem;
-  border-bottom: 1px solid #e5e5e5;
   background-color: #fafafa;
 }
 
@@ -118,19 +117,17 @@
 }
 
 .repos__list {
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
-}
-
-.repos__list {
   list-style-type: none;
 }
 
 .repos__item {
   display: flex;
   align-items: center;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid #e5e5e5;
 }
 
 .repos__icon {
@@ -140,6 +137,7 @@
 .repos__link {
   color: #4078c0;
   font-size: 0.875rem;
+  font-weight: 600;
   text-decoration: none;
 }
 
