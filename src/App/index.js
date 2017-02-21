@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Database from './../Database';
 import './index.css';
+import iconRepoPublic from './../Images/repo-public.svg';
 
 class App extends Component {
   constructor() {
@@ -43,7 +44,12 @@ class App extends Component {
     const renderRepos = Database
       .filter(repo => filterSelected === 'All' || repo[filterSelectedLowerCase])
       .map((repo, index) => {
-        return <li repos__item key={index}><a href="#">{repo.name}</a></li>;
+        return (
+          <li className="repos__item" key={index}>
+            <img className="repos__icon" src={iconRepoPublic} alt="public repo icon" />
+            <a className="repos__link" href="#">{repo.name}</a>
+          </li>
+        );
       });
 
     return (

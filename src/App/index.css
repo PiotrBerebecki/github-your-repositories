@@ -1,10 +1,17 @@
 .widget-repos {
-  width: 90%;
+  width: 95%;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid #d8d8d8;
   border-radius: 4px;
+}
+
+@media screen and (min-width: 30em) {
+  .widget-repos {
+    width: 22em;
+  }
 }
 
 .header {
@@ -21,18 +28,20 @@
 
 .header__title {
   color: rgb(51, 51, 51);
+  font-size: 0.875rem;
 }
 
 .header__count {
   display: flex;
   align-items: center;
-  height: 1.3rem;
+  height: 1.1srem;
   padding-left: 0.35rem;
   padding-right: 0.35rem;
   margin-left: 0.4rem;
   border-radius: 1rem / 1rem;
   background-color: #babec0;
   color: white;
+  font-size: 0.75rem;
 }
 
 .search {
@@ -46,7 +55,7 @@
 .search__field {
   width: 100%;
   height: 2rem;
-  padding: 0.4rem 0.5rem;
+  padding: 0.45rem 0.5rem;
   border: 1px solid #ddd;
   border-radius: 3px;
   outline: none;
@@ -65,7 +74,6 @@
   padding-left: 0.8rem;
   padding-right: 0.8rem;
   padding-top: 0.2rem;
-  /*padding-bottom: 0.8rem;*/
   border-bottom: 1px solid #e5e5e5;
   background-color: #fafafa;
 }
@@ -107,4 +115,34 @@
 .filter__btn--selected:focus {
   outline: none;
   box-shadow: none;
+}
+
+.repos__list {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.repos__list {
+  list-style-type: none;
+}
+
+.repos__item {
+  display: flex;
+  align-items: center;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.repos__icon {
+  margin-right: 0.5rem;
+}
+
+.repos__link {
+  color: #4078c0;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.repos__link:hover {
+  text-decoration: underline;
 }
